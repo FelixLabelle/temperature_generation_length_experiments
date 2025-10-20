@@ -1,7 +1,7 @@
 import pandas as pd
 from matplotlib import pyplot as plt
 
-df = pd.read_csv("results_temperature_experiment_v2.csv")
+df = pd.read_csv("results/results_temperature_experiment_v2.csv")
 '''
 # Early versions of the code have two seeds at temperature zero,
 # this is hacky code to remove them
@@ -38,7 +38,7 @@ delta_stats = (
 
 
 
-spearman_corr = df["usage_tokens"].corr(df["temperature"], method="spearman")
+spearman_corr = df["delta"].corr(df["temperature"], method="spearman")
 
 # Remove temperatures of zero to not skew histogram
 hist_df = df[df["temperature"] != 0.0]["delta"]

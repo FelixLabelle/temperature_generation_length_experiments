@@ -46,7 +46,7 @@ def make_completion(
     }
 
     headers = {
-        "Authorization": f"Bearer {API_KEY}",
+        "Authorization": f"Bearer {api_key}",
         "Content-Type": "application/json",
     }
 
@@ -73,7 +73,7 @@ if __name__ == "__main__":
     max_tokens = 2048
     seeds = [686579303, 119540831, 26855092, 796233790, 295310485, 262950628, 239670711, 149827706, 790779946, 110053353, 726600539, 795285932, 957970516, 585582861, 93349856, 634036506, 453035110, 34126396, 31994523, 100604502]
     input_csv: str = "data/sample_prompts.csv"          # must contain prompt_id,prompt_text
-    output_csv: str = "results/results_temperature_experiment_v2.csv"
+    output_csv: str = "results/results_temperature_experiment_v2_2.csv"
     
     # load data
     prompts_df = load_prompts(input_csv)
@@ -104,7 +104,7 @@ if __name__ == "__main__":
                 temperature=temp,
                 seed=seed,
                 model=model,
-                base_url=BASE_URL,
+                base_url=base_url,
             )
             response_text, tokens_used = extract_response_and_tokens(resp_json)
 
