@@ -26,7 +26,7 @@ def make_completion(
     temperature: float,
     seed : int,
     model: str,
-    base_url: str = BASE_URL,
+    base_url: str = base_url,
 ) -> Dict:
     system_prompt = (
         "You are a creative writing assistant. "
