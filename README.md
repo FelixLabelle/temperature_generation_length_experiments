@@ -2,6 +2,7 @@
 
 Code that runs an experiment to check if **temperature** when decoding a language model influences the **number of tokens a model generates**.
 
+Corresponds to the blog post [Temperature, Tokens, and Long Tales/Tails](https://felixlabelle.com/2025/10/19/relationship_temp_token_gen.html)
 ## Overview  
 * Generate a sampled dataset of prompts
 * Run prompts through an OpenAI compatible API at several temperatures and other variables 
