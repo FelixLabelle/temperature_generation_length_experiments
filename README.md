@@ -1,4 +1,4 @@
-# temperature_generation_length_experiments  
+# Temperature Generation Length Experiments
 
 Code that runs an experiment to check if **temperature** when decoding a language model influences the **number of tokens a model generates**.
 
